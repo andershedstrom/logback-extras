@@ -1,0 +1,13 @@
+<configuration>
+
+  <appender name="JMX-NOTIF" class="org.ahedstrom.logback.appender.JmxNotificationAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>[%date{mm:ss.SSS}][%thread][%msg]%n</pattern>
+    </layout>
+  </appender>
+
+  <root level="ALL">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="JMX-NOTIF" />
+  </root>
+</configuration>
